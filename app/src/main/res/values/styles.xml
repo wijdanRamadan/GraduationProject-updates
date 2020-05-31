@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+
+    <style name="NoShadowBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- remove shadow below action bar -->
+        <!-- <item name="android:elevation">0dp</item> -->
+        <!-- Support library compatibility -->
+
+        <item name="elevation">0dp</item>
+
+    </style>
+
+    <style name="NoShadowNormalTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffff</item>
+        <item name="colorPrimaryDark">#ffff</item>
+        <item name="colorAccent">#ffff</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    </style>
+
+
+</resources>

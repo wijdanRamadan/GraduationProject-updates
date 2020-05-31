@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_delete"
+        android:enabled="true"
+        android:icon="@drawable/delete_blue"
+        android:title="@string/Delete"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_favorites"
+        android:enabled="true"
+        android:icon="@drawable/favorite_blue"
+        android:title="@string/Favorite"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/action_add"
+        android:enabled="true"
+        android:icon="@drawable/add_to_album"
+        android:title="@string/add"
+        app:showAsAction="withText" />
+
+</menu>

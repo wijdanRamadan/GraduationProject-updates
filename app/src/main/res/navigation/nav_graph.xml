@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/photosFragment">
+
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.example.graduationprojectgallery.presentation.photos.PhotosFragment"
+        android:label="photos_fragment_layout"
+        tools:layout="@layout/fragment_photos">
+        <action
+            android:id="@+id/action_photosFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+        <action
+            android:id="@+id/action_photosFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_photosFragment_to_chooseAlbumFragment"
+            app:destination="@id/chooseAlbumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.example.graduationprojectgallery.presentation.foryou.AlbumFragment"
+        android:label="fragment_albums"
+        tools:layout="@layout/fragment_album">
+        <action
+            android:id="@+id/action_foryouFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_foryouFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <action
+            android:id="@+id/action_albumsFragment_to_seeAllAlbumsFragment"
+            app:destination="@id/seeAllAlbumsFragment" />
+        <action
+            android:id="@+id/action_albumsFragment_to_openAlbumFragment"
+            app:destination="@id/openAlbumFragment" />
+        <action
+            android:id="@+id/action_albumsFragment_to_openAlbumFragment2"
+            app:destination="@id/openAlbumFragment" />
+        <action
+            android:id="@+id/action_albumsFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.graduationprojectgallery.presentation.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainActivityFragment"
+        android:name="com.example.graduationprojectgallery.ui.mainactivity.MainActivityFragment"
+        android:label="main_activity2_fragment"
+        tools:layout="@layout/main_activity_fragment">
+        <action
+            android:id="@+id/action_mainActivityFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <action
+            android:id="@+id/action_mainActivityFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+        <action
+            android:id="@+id/action_mainActivityFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/seeAllAlbumsFragment"
+        android:name="com.example.graduationprojectgallery.presentation.foryou.SeeAllAlbumsFragment"
+        android:label="fragment_display_all_albums"
+        tools:layout="@layout/fragment_display_all_albums">
+        <action
+            android:id="@+id/action_seeAllAlbumsFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+        <action
+            android:id="@+id/action_seeAllAlbumsFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <action
+            android:id="@+id/action_seeAllAlbumsFragment_to_openAlbumFragment"
+            app:destination="@id/openAlbumFragment" />
+        <action
+            android:id="@+id/action_seeAllAlbumsFragment_to_editAlbumsDialog"
+            app:destination="@id/editAlbumsDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/openAlbumFragment"
+        android:name="com.example.graduationprojectgallery.presentation.foryou.OpenAlbumFragment"
+        android:label="fragment_open_album"
+        tools:layout="@layout/fragment_open_album">
+        <action
+            android:id="@+id/action_openAlbumFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+        <argument
+            android:name="album_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_openAlbumFragment_to_seeAllAlbumsFragment"
+            app:destination="@id/seeAllAlbumsFragment" />
+        <action
+            android:id="@+id/action_openAlbumFragment_to_albumsFragment2"
+            app:destination="@id/albumsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/editAlbumsDialog"
+        android:name="com.example.graduationprojectgallery.presentation.foryou.EditAlbumsDialog"
+        android:label="EditAlbumsDialog">
+        <argument
+            android:name="album_name"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/chooseAlbumFragment"
+        android:name="com.example.graduationprojectgallery.presentation.foryou.ChooseAlbumFragment"
+        android:label="ChooseAlbumFragment">
+        <action
+            android:id="@+id/action_chooseAlbumFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+        <argument
+            android:name="album_name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.graduationprojectgallery.activities.people.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" >
+        <action
+            android:id="@+id/action_personFragment_to_mainActivityFragment"
+            app:destination="@id/mainActivityFragment" />
+    </fragment>
+
+</navigation>

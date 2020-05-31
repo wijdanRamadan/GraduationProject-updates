@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.foryou.AlbumFragment"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Album"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:id="@+id/new_album_heading"
+            android:gravity="center"
+            android:fontFamily="@font/bold" />
+
+        <TextView
+            android:id="@+id/enter_album_name_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_album_heading"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/fts"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Enter a name for this album"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enter_album_name_label"
+            android:gravity="start"
+            android:background="@null"
+            android:textColor="#000"
+            android:hint="Title"
+            android:textSize="20sp"
+            android:fontFamily="@font/fts"
+            android:id="@+id/new_album_input" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textSize="18sp"
+            android:fontFamily="@font/fts"
+            android:textColor="@color/text_disabled_color"
+            android:id="@+id/action_save"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:enabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/fts"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/action_cancel"
+            android:focusableInTouchMode="false"
+            android:focusable="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

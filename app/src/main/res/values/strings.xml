@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Gallery</string>
+    <string name="photos">photos</string>
+    <string name="albums">Albums</string>
+    <string name="search">Search</string>
+
+    <string name="image_content_description">description</string>
+    <string name="my_albums">My Albums</string>
+    <string name="see_all">See All</string>
+    <string name="share">share</string>
+    <string name="favorite">favorite</string>
+    <string name="delete">delete</string>
+    <string name="details">Image Details</string>
+    <string name="size">size</string>
+    <string name="date">date</string>
+    <string name="peopleNplaces"><![CDATA[People]]></string>
+    <string name="Edit">Edit</string>
+    <string name="Done">Done</string>
+    <string name="Select">Select</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Photos">Photos</string>
+    <string name="todo">TODO</string>
+    <string name="Delete">Delete</string>
+    <string name="Favorite">Favorites</string>
+    <string name="add">Add</string>
+    <string name="Add_to">Add To</string>
+    <string name="Add_to_people">add to people</string>
+    <string name="person">person</string>
+</resources>

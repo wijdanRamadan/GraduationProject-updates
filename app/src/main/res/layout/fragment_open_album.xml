@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/phtos_bar_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/open_album_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/NoShadowNormalTheme"
+        app:layout_collapseMode="pin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_scrollFlags="scroll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/back_to_albums_imageView"
+                android:layout_width="35dp"
+                android:layout_height="34dp"
+                android:layout_alignParentLeft="true"
+
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="0dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:foregroundGravity="right"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+
+                />
+
+            <TextView
+                android:id="@+id/back_to_albums_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/back_to_albums_imageView"
+                android:fontFamily="@font/fts"
+                android:text="@string/albums"
+                android:textColor="@android:color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/album_name_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:fontFamily="@font/bold"
+                android:text="@string/albums"
+                android:textColor="@android:color/black"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/edit_albums_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/fts"
+                android:gravity="center_vertical"
+                android:text="@string/Select"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/done_albums_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/fts"
+                android:gravity="center_vertical"
+                android:text="@string/Cancel"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/album_delete_nav_bar"
+        android:layout_below="@id/open_album_titlebar"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/open_album_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" />
+
+
+    </GridLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/album_delete_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#D3D3D3"
+        android:visibility="gone"
+        app:itemIconTint="@android:color/black"
+        app:itemTextColor="@android:color/black"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/albums_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

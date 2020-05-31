@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.foryou.AlbumFragment"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="170dp"
+        android:padding="10dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Delete hdhdhd?"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@id/confirmation"
+            android:id="@+id/delete_album_name_textview"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to delete the album?"
+            android:textAlignment="center"
+            android:fontFamily="@font/fts"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:id="@+id/confirmation" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:id="@+id/delete_album"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"></Button>
+
+        <Button
+            android:id="@+id/cancel_delete_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="20dp"></Button>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
